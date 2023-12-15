@@ -1,0 +1,57 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import Footer from "./Footer.astro";
+import Header from "./Header.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Hankook Alvillantas" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/public/images/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <div class="container mx-auto">
+      <Header />
+      <div>
+        <slot />
+      </div>
+      <Footer />
+    </div>
+    <style is:global lang="scss">
+      html {
+        font-family: system-ui, sans-serif;
+        color-scheme: dark light;
+      }
+
+      .color {
+        &__primary {
+          color: #16A8D4;
+        }
+        &__secondary {
+          color: #004E90;
+        }
+        &__tertiary{
+          color: #032D57;
+        }
+        &__white {
+          color: #fff;
+        }
+        &__black {
+          color: #000;
+        }
+      }
+    </style>
+  </body>
+</html>
