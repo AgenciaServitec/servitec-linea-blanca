@@ -44,6 +44,14 @@ export default {
           950: "#032d57",
         },
       },
+      width: {
+        "98": "26rem",
+        "100": "30rem"
+      },
+      height: {
+        "98": "26rem",
+        "100": "30rem"
+      }
     },
   },
   plugins: [],

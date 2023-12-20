@@ -1,12 +1,12 @@
 ---
 interface Props {
-	title: string;
+	title: string
 }
 
 const { title } = Astro.props;
 ---
 
-<h2>
+<h2 class="text-gray-950">
 	{title}
 	<span>
 		<slot />
@@ -16,11 +16,11 @@ const { title } = Astro.props;
 <style lang="scss">
   h2 {
     color: #fff;
-    font-size: 3em;
-    font-style: italic;
+    font-size: 2rem;
     text-align: center;
+	font-weight: 500;
     line-height: 0.85;
-    margin-bottom: 1.2em;
+    margin-bottom: 3rem;
     text-transform: uppercase;
 
 		@media (max-width: 576px) {
@@ -32,7 +32,6 @@ const { title } = Astro.props;
 		}
 
 		span {
-			color: #fc4c09;
 			font-size: 1.5em;
 			display: block;
 		}

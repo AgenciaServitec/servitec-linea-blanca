@@ -1,0 +1,49 @@
+---
+import Button from "./Button.astro";
+
+interface Props{
+  image: string,
+  title: string,
+  description: string,
+}
+
+const {image, title, description} = Astro.props;
+
+const styleButton = {
+  width: "9.5em",
+  borderRadius: "0",
+  position: "absolute",
+  bottom: "0",
+  right: "0",
+  textTransform: "uppercase",
+};
+---
+
+<article class="product flex flex-col rounded-lg bg-white shadow-2xl">
+  <div class="product__img">
+    <img src={image} alt="" />
+  </div>
+  <div class=" bg-white p-6">
+    <h2 class="mb-2 text-gray-950 text-xl font-medium">{title}</h2>
+    <p class="mb-8 text-gray-500">{description}</p>
+    <button class="w-2/5 bg-primary-color-500 py-2 rounded-lg uppercase text-sm text-white">Leer más</button>
+    <!-- <Button>Leer más</Button> -->
+  </div>
+</article>
+
+<style lang="scss">
+  .product {
+    width: auto;
+    overflow: hidden;
+
+    &__img {
+      width: 100%;
+      height: 225px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+</style>
