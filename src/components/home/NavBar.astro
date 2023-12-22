@@ -1,11 +1,13 @@
 ---
+import { Icon } from "astro-icon";
 ---
 
-<nav>
-    <ul>
+<nav class="flex">
+    <Icon name="mdi:menu" class="w-10 flex md:hidden" />
+    <ul class="hidden md:flex gap-10 uppercase font-medium">
         <li><a href="/">Inicio</a></li>
         <li><a href="/services">Servicios</a></li>
-        <li><a href="/about">Nosotros</a></li>
+        <li><a href="/about-us">Nosotros</a></li>
         <li><a href="/contact">Contáctanos</a></li>
     </ul>
 </nav>

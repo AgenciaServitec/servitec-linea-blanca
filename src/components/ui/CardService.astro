@@ -1,13 +1,13 @@
 ---
 import Button from "./Button.astro";
 
-interface Props{
-  image: string,
-  title: string,
-  description: string,
+interface Props {
+  image: string;
+  title: string;
+  description: string;
 }
 
-const {image, title, description} = Astro.props;
+const { image, title, description } = Astro.props;
 
 const styleButton = {
   width: "9.5em",
@@ -23,11 +23,10 @@ const styleButton = {
   <div class="product__img">
     <img src={image} alt="" />
   </div>
-  <div class=" bg-white p-6">
+  <div class="bg-white p-6">
     <h2 class="mb-2 text-gray-950 text-xl font-medium">{title}</h2>
     <p class="mb-8 text-gray-500">{description}</p>
-    <button class="w-2/5 bg-primary-color-500 py-2 rounded-lg uppercase text-sm text-white">Leer más</button>
-    <!-- <Button>Leer más</Button> -->
+    <Button>Leer más</Button>
   </div>
 </article>
 
