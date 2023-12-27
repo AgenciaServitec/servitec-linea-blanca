@@ -1,0 +1,68 @@
+---
+import { BaseLayout } from "../../layouts";
+import {HeaderSection} from "../../components";
+---
+
+<BaseLayout>
+  <main>
+    <div class="px-6">
+      <HeaderSection title="Contáctanos" image="/header-contact.jpg" />
+      <form
+        action=""
+        class="grid grid-cols-1 grid-flow-row gap-2 p-4 rounded-md bg-gray-300"
+      >
+        <h2 class="text-xl text-center font-medium">Solicitud de servicio</h2>
+        <div>
+          <label for="" class="font-medium block mb-1">Nombres:</label>
+          <input
+            type="text"
+            placeholder="Ingrese nombres"
+            class="w-full h-8 px-2 border-2 border-gray-400 rounded-md"
+          />
+        </div>
+        <div>
+          <label for="" class="font-medium block mb-1">Apellidos:</label>
+          <input
+            type="text"
+            placeholder="Ingrese apellidos"
+            class="w-full h-8 px-2 border-2 border-gray-400 rounded-md"
+          />
+        </div>
+        <div>
+          <label for="" class="font-medium block mb-1">Correo:</label>
+          <input
+            type="email"
+            placeholder="Ingrese correo"
+            class="w-full h-8 px-2 border-2 border-gray-400 rounded-md"
+          />
+        </div>
+        <div>
+          <label for="" class="font-medium block mb-1">Teléfono:</label>
+          <input
+            type="number"
+            placeholder="Ingrese teléfono"
+            class="w-full h-8 px-2 border-2 border-gray-400 rounded-md"
+          />
+        </div>
+        <div>
+          <label for="" class="font-medium block mb-1">Mensaje</label>
+          <textarea
+            placeholder="Ingrese mensaje"
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            class="w-full h-24 px-2 border-2 border-gray-400 rounded-md"
+          ></textarea>
+        </div>
+        <button class="h-8 rounded-md text-white bg-primary-color-500">Enviar</button>
+      </form>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+    .header-contact{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/header-contact.jpg");
+    }
+</style>

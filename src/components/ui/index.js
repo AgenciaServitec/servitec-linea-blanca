@@ -10,3 +10,4 @@ export { default as Title } from "./Title.astro";
 export { default as CardService } from "./CardService.astro";
 export { default as SectionWrapper } from "./SectionWrapper.astro";
 export { default as Divider } from "./Divider.astro";
+export { default as HeaderSection } from "./HeaderSection.astro";

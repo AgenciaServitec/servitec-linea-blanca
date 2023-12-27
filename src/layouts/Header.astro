@@ -1,13 +1,28 @@
 ---
 import { Banner } from "../components";
+import { Icon } from "astro-icon";
 import NavBar from "../components/home/NavBar.astro";
+import NavBarMovil from "../components/home/NavBarMovil.astro";
 ---
 
-<header class="h-20 flex justify-between items-center px-6 shadow-lg">
+<header class="relative h-20 flex justify-between items-center px-6 shadow-lg">
   <figure class="w-44">
-    <img src="logo-air-servitec.png" alt="" />
+    <img src="/logo-air-servitec.png" alt="" />
   </figure>
+  <Icon name="mdi:menu" id="btnNavbar" class="w-10 md:hidden" />
   <NavBar />
+  <NavBarMovil />
 </header>
 
-<style lang="scss"></style>
+<script>
+  const btnNavbar = document.querySelector("#btnNavbar");
+  const navBarMovil = document.querySelector("#NavBarMovil") ;
+  console.log({navBarMovil});
+
+  btnNavbar.addEventListener("click", () => {
+    if(navBarMovil.classList.contains("desactivado")){
+      navBarMovil.classList.remove("desactivado");
+      navBarMovil.classList.add("activado");
+    }
+  })
+</script>

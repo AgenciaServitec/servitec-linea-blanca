@@ -1,13 +1,48 @@
 ---
-import { Icon } from "astro-icon";
+
 ---
 
-<nav class="flex">
-    <Icon name="mdi:menu" class="w-10 flex md:hidden" />
-    <ul class="hidden md:flex gap-10 uppercase font-medium">
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/services">Servicios</a></li>
-        <li><a href="/about-us">Nosotros</a></li>
-        <li><a href="/contact">Contáctanos</a></li>
-    </ul>
+<nav class="navbar hidden md:flex">
+  <ul class="md:flex gap-5 uppercase font-medium">
+    <li class="text-center w-36">
+      <a class="w-full block" href="/">Inicio</a>
+    </li>
+    <li class="relative group text-center w-36">
+      <span class="w-full block cursor-pointer">Servicios</span>
+      <ul
+        class="absolute hidden -bottom-[19rem] group-hover:flex group-active:flex flex-col gap-2 p-2 rounded-md w-full bg-white z-50"
+      >
+        <li class="text-left">
+          <a
+            class="flex text-xs p-2"
+            href="/services/reparacion-electrica-de-cocina"
+            >Reparación eléctrica de cocina</a>
+        </li>
+        <li class="text-left">
+          <a
+            class="flex text-xs p-2"
+            href="/services/reparacion-de-refrigeradoras"
+            >Reparación de refrigeradoras</a>
+        </li>
+        <li class="text-left">
+          <a class="flex text-xs p-2" href="/services/reparacion-de-lavadoras"
+            >Reparación de lavadoras</a>
+        </li>
+        <li class="text-left">
+          <a class="flex text-xs p-2" href="/services/reparacion-de-camaras"
+            >Reparación de cámaras</a>
+        </li>
+        <li class="text-left">
+          <a class="flex text-xs p-2" href="/services/reparacion-de-televisores"
+            >Reparación de televisores</a>
+        </li>
+      </ul>
+    </li>
+    <li class="text-center w-36">
+      <a class="w-full block" href="/about-us">Nosotros</a>
+    </li>
+    <li class="text-center w-36">
+      <a class="w-full block" href="/contact">Contáctanos</a>
+    </li>
+  </ul>
 </nav>

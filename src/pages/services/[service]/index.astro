@@ -1,22 +1,24 @@
 ---
 import { BaseLayout } from "../../../layouts";
+import {services} from "../../../data-list/services.js"; 
 
 export function getStaticPaths() {
   return [
-    { params: { service: "reparacion-electrica-de-cocina" } },
-    { params: { service: "reparacion-de-refrigeradoras" } },
-    { params: { service: "reparacion-de-lavadoras" } },
-    { params: { service: "reparacion-de-camaras" } },
-    { params: { service: "reparacion-de-televisores" } },
+    { params: { service: "reparacion-electrica-de-cocina" }, props: {pageTitle: "Reparación eléctrica de cocina"} },
+    { params: { service: "reparacion-de-refrigeradoras" }, props: {pageTitle: "Reparación de refrigeradoras"} },
+    { params: { service: "reparacion-de-lavadoras" }, props: {pageTitle: "Reparación de lavadoras"} },
+    { params: { service: "reparacion-de-camaras" }, props: {pageTitle: "Reparación de cámaras"} },
+    { params: { service: "reparacion-de-televisores" }, props: {pageTitle: "Reparación de televisores"} },
   ];
 }
 
-const { service } = Astro.params;
+const { pageTitle } = Astro.props;
+
 ---
 
 <BaseLayout title="Servicios">
   <main>
-    <h2>{service}</h2>
+    <h2 class="text-center text-lg">{pageTitle}</h2>
     <section class="flex justify-center md:justify-around flex-wrap gap-6 px-6">
       <div class="max-w-md">
         <figure class="mb-6">
