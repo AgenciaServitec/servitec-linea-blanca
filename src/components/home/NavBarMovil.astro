@@ -1,0 +1,115 @@
+---
+interface Props {
+  isActive?: string;
+}
+
+const { isActive } = Astro.props;
+
+console.log(Astro);
+
+import { Icon } from "astro-icon";
+---
+
+<nav
+  id="NavBarMovil"
+  class="nav absolute right-0 top-0 w-full h-screen flex justify-end bg-black/50 desactivado z-[500]"
+>
+  <div class="w-5/6 p-6 flex flex-col bg-white">
+    <Icon name="mdi:close" id="close" class="w-10 self-end mb-2" />
+    <ul class="flex flex-col items-center uppercase text-center font-medium">
+      <li class="text-center w-full">
+        <a class="w-full block py-4" href="/">Inicio</a>
+      </li>
+      <li class="relative overflow-hidden text-center w-full">
+        <div class="relative">
+          <span class="w-full block py-4 group btn-submenu">Servicios</span>
+          <Icon
+            id="arrow"
+            name="mdi-light:chevron-down"
+            class="w-8 absolute right-0 top-1/2 -translate-y-1/2"
+          />
+        </div>
+        <ul
+          class="h-0 sub-menu duration-500 ease-linear group-active:flex flex-col"
+        >
+          <li class="">
+            <a
+              class="flex justify-center text-xs p-2"
+              href="/services/reparacion-electrica-de-cocina"
+              >Reparación eléctrica de cocina</a
+            >
+          </li>
+          <li class="">
+            <a
+              class="flex justify-center text-xs p-2"
+              href="/services/reparacion-de-refrigeradoras"
+              >Reparación de refrigeradoras</a
+            >
+          </li>
+          <li class="">
+            <a
+              class="flex justify-center text-xs p-2"
+              href="/services/reparacion-de-lavadoras"
+              >Reparación de lavadoras</a
+            >
+          </li>
+          <li class="">
+            <a
+              class="flex justify-center text-xs p-2"
+              href="/services/reparacion-de-camaras">Reparación de cámaras</a
+            >
+          </li>
+          <li class="">
+            <a
+              class="flex justify-center text-xs p-2"
+              href="/services/reparacion-de-televisores"
+              >Reparación de televisores</a
+            >
+          </li>
+        </ul>
+      </li>
+      <li class="text-center w-full">
+        <a class="w-full block py-4" href="/about-us">Nosotros</a>
+      </li>
+      <li class="text-center w-full">
+        <a class="w-full block py-4" href="/contact">Contáctanos</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .active {
+    height: auto;
+    transition-duration: 0.3s;
+  }
+
+  .activado {
+    transform: translateX(0);
+    transition-duration: 0.3s;
+  }
+
+  .desactivado {
+    transition-duration: 0.3s;
+    transform: translateX(100%);
+  }
+</style>
+
+<script>
+  const close = document.querySelector("#close");
+  const nav = document.querySelector(".nav");
+  const btnSubmenu = document.querySelector(".btn-submenu");
+  const subMenu = document.querySelector(".sub-menu");
+  const arrow = document.querySelector("#arrow");
+
+  close.addEventListener("click", () => {
+    if (nav.classList.contains("activado")) {
+      nav.classList.remove("activado");
+      nav.classList.add("desactivado");
+    }
+  });
+
+  btnSubmenu.addEventListener("click", () => {
+    subMenu.classList.toggle("active");
+  });
+</script>

@@ -1,0 +1,19 @@
+---
+interface Props{
+    title?: string,
+    image?: string
+    imageName?: string
+}
+const {title, image, imageName} = Astro.props;
+---
+
+<section
+  class="relative h-[20vh] md:h-[30vh] lg:h-[40vh] px-6 after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-b after:from-secondary-color-800/60 after:to-secondary-color-800/60 flex justify-center items-center mb-10"
+>
+  <img
+    src={image}
+    alt={imageName}
+    class="absolute object-cover object-top w-full h-full"
+  />
+  <h2 class="text-white text-3xl lg:text-5xl uppercase font-medium z-30">{title}</h2>
+</section>

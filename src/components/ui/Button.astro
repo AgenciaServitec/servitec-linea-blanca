@@ -1,42 +1,17 @@
 ---
 interface Props {
-  type?: "primary" | "secondary" | "tertiary";
-  styleLine?: Record<string, string>;
+  link?: string;
+  increaseStyle?: string;
 }
 
-const { type = "primary", styleLine } = Astro.props;
+const { link, increaseStyle } = Astro.props;
 ---
 
-<button class={type} style={styleLine}>
+<a
+  href={link}
+  type="button"
+  class={`flex items-center w-max uppercase text-white bg-primary-color-400 hover:bg-primary-color-300 focus:ring-4 focus:bg-primary-color-500 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none ${increaseStyle}`}
+>
   <slot />
-</button>
-
-<style lang="scss">
-  button {
-    display: flex;
-    place-items: center;
-    gap: 0.2em;
-    padding: 0.7em 1.2em;
-    text-align: center;
-    border-radius: 7em;
-    border: none;
-    font-weight: 600;
-    cursor: pointer;
-  }
-  .primary {
-    background-color: #fe4e02;
-    color: #fff;
-  }
-  .secondary {
-    background-color: #8b8b8b;
-    color: #fff;
-  }
-  .tertiary {
-    margin: 0 auto;
-    font-size: 1.5em;
-    text-transform: upperCase;
-    font-style: italic;
-    background-color: #fe4e02;
-    color: #fff;
-  }
-</style>
+  <slot name="icon" />
+</a>

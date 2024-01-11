@@ -1,8 +1,92 @@
-<footer class="bg-tertiary-color-950">
-  <div class="w-full p-4 text-center">
+---
+import { Icon } from "astro-icon";
+const h3 = ["mb-4 font-semibold relative w-max uppercase"];
+---
+
+<footer
+  class="bg-gradient-to-b from-secondary-color-950 to-secondary-color-800 text-white"
+>
+  <section class="py-10 px-6">
+    <section>
+      <figure class="mb-8">
+        <img
+          src="/logo-air-servitec.png"
+          alt="Logo Air Servitec"
+          class="w-full md:w-72"
+        />
+      </figure>
+    </section>
+    <section class="flex flex-col lg:flex-row lg:justify-between gap-6">
+      <section class="flex-1">
+        <h3 class:list={h3}>Nosotros</h3>
+        <p>
+          Reparación especializada de electrodomésticos clave. Soluciones
+          rápidas, servicio profesional y satisfacción garantizada. Confía en
+          nosotros para el mantenimiento de tus dispositivos.
+        </p>
+      </section>
+      <section class="flex-1">
+        <h3 class:list={h3}>Contáctanos</h3>
+        <div class="flex flex-col gap-2">
+          <p class="flex gap-2">
+            <span>
+              <Icon name="mdi:phone" size={24} />
+            </span>
+            <span>941 801 827</span>
+          </p>
+          <p class="flex gap-2">
+            <span>
+              <Icon name="mdi:email" size={24} />
+            </span>
+            <span>contacto@servitecperu.com</span>
+          </p>
+          <p class="flex gap-2">
+            <span>
+              <Icon name="mdi:location" size={24} />
+            </span>
+            <span>Calle Nestor Bermudez N° 113, Chorrillos - Lima</span>
+          </p>
+        </div>
+      </section>
+      <section class="flex-1">
+        <h3 class:list={h3}>Links</h3>
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/about">Nosotros</a></li>
+          <li><a href="/contact">Contáctanos</a></li>
+        </ul>
+      </section>
+      <section class="flex-1">
+        <h3 class:list={h3}>Servicios</h3>
+        <ul>
+          <li><a href="#">Reparación de refrigeradores</a></li>
+          <li><a href="#">Reparación de lavavajillas</a></li>
+          <li><a href="#">Reparación de televisores</a></li>
+          <li><a href="#">Reparación de hornos</a></li>
+          <li><a href="#">Reparación de lavadoras y secadoras</a></li>
+        </ul>
+      </section>
+    </section>
+  </section>
+  <div class="bg-tertiary-color-950 w-full py-8 px-6 text-center">
     <p class="text-sm">
       Copyrights © 2023 Servitec Linea Blanca - Todos los derechos reservados -
-      Desarrollado por <a href="#" class="text-red-600 font-bold hover:underline">Agencia Servitec</a>
+      Desarrollado por <a
+        href="#"
+        class="text-red-600 font-bold hover:underline">Agencia Servitec</a
+      >
     </p>
   </div>
 </footer>
+
+<style type="scss">
+  h3::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    background-color: #16a8d4;
+    left: 0;
+    bottom: -2.5px;
+  }
+</style>

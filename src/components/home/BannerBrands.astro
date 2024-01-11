@@ -1,0 +1,26 @@
+---
+const logos = [
+  "sole",
+  "hidrostal",
+  "indurama",
+  "bosch",
+  "electrolux",
+  "lg",
+  "rotoplas"
+];
+---
+
+<section class="flex flex-wrap gap-4 overflow-x-auto bg-primary-color-500 justify-evenly items-center p-6 md:p-0 md:py-6">
+  {
+    logos.map((logo) => {
+      return (
+        <figure class="w-24 flex flex-col justify-center">
+          <img
+            src={`/logo-${logo}.webp`}
+            alt={`Logo de la marca ${logo}`}
+          />
+        </figure>
+      );
+    })
+  }
+</section>
