@@ -6,3 +6,5 @@ export * from "../layouts";
 
 //Component to pages
 export * from "./home";
+
+export { default as OtherServices } from "./OtherServices.astro";

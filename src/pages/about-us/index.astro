@@ -1,32 +1,12 @@
 ---
 import { BaseLayout } from "../../layouts";
-import { HeaderSection } from "../../components";
+import { Title, About } from "../../components";
 ---
 
 <BaseLayout title="Nosotros">
-  <main>
-    <HeaderSection title="Nosotros" image="/header-about-us.jpg" />
-    <section
-      class="flex flex-col lg:flex-row relative bg-secondary-color-800 after:content-[''] after:absolute after:left-0 after:bottom-0 after:z-0 after:w-full after:h-full after:bg-gradient-to-t from-secondary-color-800 from-50% lg:after:bg-gradient-to-l from-secondary-color-800 from-55%"
-    >
-      <figure class="flex-1">
-        <img class="w-full" src="/about-us.jpg" alt="" />
-      </figure>
-      <div
-        class="flex-1 flex flex-col md:justify-center z-10 py-10 px-6 text-white"
-      >
-        <h2 class="font-medium text-center text-xl uppercase mb-4">
-          ¿Quiénes somos?
-        </h2>
-        <p class="text-center leading-8">
-          En Servirtec, nos especializamos en la reparación de electrodomésticos
-          clave en tu hogar, incluyendo cocinas, refrigeradores y aire
-          acondicionado. Nuestro equipo de técnicos altamente capacitados se
-          dedica a proporcionar soluciones rápidas y eficientes para mantener
-          tus electrodomésticos en óptimo estado.
-        </p>
-      </div>
-    </section>
+  <main class="py-10">
+    <Title>Nosotros</Title>
+    <About />
   </main>
 </BaseLayout>
 

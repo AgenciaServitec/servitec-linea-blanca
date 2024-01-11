@@ -2,6 +2,7 @@
 import { ViewTransitions } from "astro:transitions";
 import Footer from "./Footer.astro";
 import Header from "./Header.astro";
+import BaseHead from "./BaseHead.astro";
 
 interface Props {
   title?: string;
@@ -12,15 +13,7 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Hankook Alvillantas" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/public/images/favicon.png" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    <ViewTransitions />
-  </head>
+  <BaseHead title={title} description="Servitec - Reparación línea blanca" />
   <body>
     <div class="w-full max-w-7xl mx-auto overflow-hidden">
       <Header />
@@ -37,13 +30,13 @@ const { title } = Astro.props;
 
       .color {
         &__primary {
-          color: #16A8D4;
+          color: #16a8d4;
         }
         &__secondary {
-          color: #004E90;
+          color: #004e90;
         }
-        &__tertiary{
-          color: #032D57;
+        &__tertiary {
+          color: #032d57;
         }
         &__white {
           color: #fff;

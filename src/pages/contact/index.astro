@@ -1,68 +1,95 @@
 ---
 import { BaseLayout } from "../../layouts";
-import {HeaderSection} from "../../components";
+import { Button, HeaderSection, Title } from "../../components";
 ---
 
-<BaseLayout>
-  <main>
-    <div class="px-6">
-      <HeaderSection title="Contáctanos" image="/header-contact.jpg" />
-      <form
-        action=""
-        class="grid grid-cols-1 grid-flow-row gap-2 p-4 rounded-md bg-gray-300"
-      >
-        <h2 class="text-xl text-center font-medium">Solicitud de servicio</h2>
-        <div>
-          <label for="" class="font-medium block mb-1">Nombres:</label>
-          <input
-            type="text"
-            placeholder="Ingrese nombres"
-            class="w-full h-8 px-2 border-2 border-gray-400 rounded-md"
-          />
-        </div>
-        <div>
-          <label for="" class="font-medium block mb-1">Apellidos:</label>
-          <input
-            type="text"
-            placeholder="Ingrese apellidos"
-            class="w-full h-8 px-2 border-2 border-gray-400 rounded-md"
-          />
-        </div>
-        <div>
-          <label for="" class="font-medium block mb-1">Correo:</label>
-          <input
-            type="email"
-            placeholder="Ingrese correo"
-            class="w-full h-8 px-2 border-2 border-gray-400 rounded-md"
-          />
-        </div>
-        <div>
-          <label for="" class="font-medium block mb-1">Teléfono:</label>
-          <input
-            type="number"
-            placeholder="Ingrese teléfono"
-            class="w-full h-8 px-2 border-2 border-gray-400 rounded-md"
-          />
-        </div>
-        <div>
-          <label for="" class="font-medium block mb-1">Mensaje</label>
-          <textarea
-            placeholder="Ingrese mensaje"
-            name=""
-            id=""
-            cols="30"
-            rows="10"
-            class="w-full h-24 px-2 border-2 border-gray-400 rounded-md"
-          ></textarea>
-        </div>
-        <button class="h-8 rounded-md text-white bg-primary-color-500">Enviar</button>
-      </form>
-    </div>
+<BaseLayout title="Contáctanos">
+  <main class="py-10 lg:flex lg:px-24">
+    <section class="mb-10 lg:mb-0 lg:py-16 text-black">
+      <Title>Servitec - Perú</Title>
+      <div class="px-6">
+        <address class="text-center mb-4">
+          Lima, Perú - Ubícanos en el distrito de Chorrillos.
+        </address>
+        <p class="mb-1 text-tertiary-color-950"><strong>Teléfono</strong></p>
+        <ul class="mb-2 list-disc list-inside">
+          <li>972252744</li>
+        </ul>
+        <p class="mb-1 text-tertiary-color-950"><strong>Correo</strong></p>
+        <ul class="list-disc list-inside">
+          <li>gerencia@servitec-peru.com</li>
+          <li>contactos@servitec-peru.com</li>
+        </ul>
+      </div>
+    </section>
+    <section class="bg-white ml-auto">
+      <div class="pt-8 lg:pt-16 px-4 mx-auto max-w-screen-md lg:w-100">
+        <Title>Contáctanos!</Title>
+        <form action="#" class="space-y-8">
+          <div>
+            <label
+              for="name"
+              class="block mb-2 text-sm font-medium text-black"
+              >Nombres</label
+            >
+            <input
+              type="text"
+              id="name"
+              class="block p-3 w-full text-sm text-black rounded-lg border border-primary-color-950 shadow-sm  placeholder-gray-400"
+              placeholder="Ingrese su nombre"
+              required
+            />
+          </div>
+          <div>
+            <label
+              for="email"
+              class="block mb-2 text-sm font-medium text-black"
+              >Correo</label
+            >
+            <input
+              type="email"
+              id="email"
+              class="block p-3 w-full text-sm text-black rounded-lg border border-primary-color-950 shadow-sm  placeholder-gray-400"
+              placeholder="Ingrese su correo"
+              required
+            />
+          </div>
+          <div>
+            <label
+              for="phone"
+              class="block mb-2 text-sm font-medium text-black"
+              >Teléfono</label
+            >
+            <input
+              type="number"
+              id="phone"
+              class="block p-3 w-full text-sm text-black rounded-lg border border-primary-color-950 shadow-sm  placeholder-gray-400"
+              placeholder="Ingrese su teléfono"
+              required
+            />
+          </div>
+          <div class="sm:col-span-2">
+            <label
+              for="message"
+              class="block mb-2 text-sm font-medium text-black"
+              >Consulta</label
+            >
+            <textarea
+              id="message"
+              rows="6"
+              class="block p-2.5 w-full text-sm text-black rounded-lg shadow-sm border border-primary-color-950 placeholder-gray-400"
+              placeholder="Ingrese su consulta"></textarea>
+          </div>
+          <Button>Enviar</Button>
+        </form>
+      </div>
+    </section>
   </main>
 </BaseLayout>
 
 <style>
-    .header-contact{
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/header-contact.jpg");
-    }
+  .header-contact {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/header-contact.jpg");
+  }
 </style>

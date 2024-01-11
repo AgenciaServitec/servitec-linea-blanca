@@ -1,62 +1,56 @@
 ---
 import { BaseLayout } from "../../../layouts";
-import {services} from "../../../data-list/services.js"; 
+import { services } from "../../../data-list/services.js";
+import { Title } from "../../../components";
 
-export function getStaticPaths() {
-  return [
-    { params: { service: "reparacion-electrica-de-cocina" }, props: {pageTitle: "Reparación eléctrica de cocina"} },
-    { params: { service: "reparacion-de-refrigeradoras" }, props: {pageTitle: "Reparación de refrigeradoras"} },
-    { params: { service: "reparacion-de-lavadoras" }, props: {pageTitle: "Reparación de lavadoras"} },
-    { params: { service: "reparacion-de-camaras" }, props: {pageTitle: "Reparación de cámaras"} },
-    { params: { service: "reparacion-de-televisores" }, props: {pageTitle: "Reparación de televisores"} },
-  ];
+export async function getStaticPaths() {
+  return services;
 }
 
-const { pageTitle } = Astro.props;
-
+const { image, title, descriptionDetails } = Astro.props;
 ---
 
 <BaseLayout title="Servicios">
-  <main>
-    <h2 class="text-center text-lg">{pageTitle}</h2>
-    <section class="flex justify-center md:justify-around flex-wrap gap-6 px-6">
+  <main class="px-6 py-10">
+    <Title>{title}</Title>
+    <section
+      class="flex
+    flex-wrap
+    justify-center
+    gap-6
+    md:justify-around"
+    >
       <div class="max-w-md">
         <figure class="mb-6">
-          <img src="../../../../public/images/repa_televisor.webp" alt="" />
+          <img src={image} alt={`Imagen de ${title}`} />
         </figure>
-        <p>
-          Comprendemos la importancia central de la cocina en su hogar, y es por
-          eso que nuestro equipo de expertos se esfuerza por brindar soluciones
-          integrales que no solo reparen los inconvenientes, sino que también
-          mejoren la eficiencia y la seguridad de su espacio culinario. Nuestro
-          enfoque comienza con un análisis detallado de la instalación eléctrica
-          en su cocina. Identificamos cualquier cableado defectuoso, conexiones
-          inseguras o componentes desgastados que podrían estar comprometiendo
-          el rendimiento eléctrico.
+        <p class="text-black text-pretty leading-7">
+          {descriptionDetails}
         </p>
       </div>
-      <div class="w-72">
-        <h3 class="text-lg font-medium text-primary-color-500 uppercase mb-4">Servicios</h3>
+
+      <div class="w-full md:w-72 text-black">
+        <h3
+          class="mb-6
+          text-4xl
+          text-primary-color-500
+          tracking-tight
+          font-extrabold"
+        >
+          Servicios
+        </h3>
         <ul>
-          <li class="border-t border-black py-4">
-            <a href="/services/reparacion-electrica-de-cocina"
-              >Reparación eléctrica de cocina</a>
-          </li>
-          <li class="border-t border-black py-4">
-            <a href="/services/reparacion-de-refrigeradoras"
-              >Reparación de refrigeradoras</a>
-          </li>
-          <li class="border-t border-black py-4">
-            <a href="/services/reparacion-de-lavadoras"
-              >Reparación de lavadoras</a>
-          </li>
-          <li class="border-t border-black py-4">
-            <a href="/services/reparacion-de-camaras">Reparación de cámaras</a>
-          </li>
-          <li class="border-t border-black py-4">
-            <a href="/services/reparacion-de-televisores"
-              >Reparación de televisores</a>
-          </li>
+          {
+            services.slice(0, 5).map((serviceItem) => {
+              return (
+                <li class="border-t border-gray-300 py-4">
+                  <a href={`/services${serviceItem.params.service}`}>
+                    {serviceItem.props.title}
+                  </a>
+                </li>
+              );
+            })
+          }
         </ul>
       </div>
     </section>

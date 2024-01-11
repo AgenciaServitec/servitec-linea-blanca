@@ -1,30 +1,33 @@
 ---
-import { Banner, BannerBrands, CardService, Title } from "../components";
+import { About, Banner, BannerBrands, CardService, Title } from "../components";
 import { BaseLayout } from "../layouts";
 import { services } from "../data-list/services.js";
 ---
 
 <BaseLayout title="Servitec linea blanca">
-  <main class="">
-    <Banner/>
+  <main class="mb-20">
+    <Banner />
     <BannerBrands />
     <section class="px-6 py-20">
-      <Title title="Nuestros Servicios" />
-      <section class="grid md:grid-cols-3 gap-6">
+      <Title title="Nuestros Servicios" marginBottom="mb-10" />
+      <section class="grid
+      grid-cols-1
+      md:grid-cols-3
+      gap-6">
         {
           services.map((service) => {
             return (
               <CardService
-                image={service.image}
-                title={service.title}
-                description={service.description}
+                image={service.props.image}
+                title={service.props.title}
+                description={service.props.description}
+                link={service.params.service}
               />
             );
           })
         }
       </section>
     </section>
+    <About />
   </main>
 </BaseLayout>
-
-<style lang="scss"></style>

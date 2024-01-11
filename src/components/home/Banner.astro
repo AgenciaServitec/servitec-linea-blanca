@@ -2,15 +2,34 @@
 import { Button, Title } from "../../components";
 ---
 
-<section class="w-full h-72 md:h-98 bg-[url('/fondo-banner.jpg')] flex bg-cover px-6">
-  <section>
-    <h1 class="mt-16 text-xl md:text-4xl lg:text-5xl text-white">Servicio Técnico de Electrodomésticos</h1>
+<section
+  class="flex
+   flex-col
+   gap-2
+   md:flex-row
+   w-full
+   md:h-96
+   py-8
+   bg-[url('/fondo-banner.jpg')]
+   bg-cover px-6"
+>
+  <section class="md:w-1/2
+  md:self-center">
+    <h1
+      class="mb-6
+      text-4xl
+      lg:text-5xl
+      tracking-tight
+      font-extrabold
+      text-white"
+    >
+      Servicio Técnico de Electrodomésticos
+    </h1>
     <Button>Contáctanos</Button>
   </section>
-  <figure class="w-100 self-end md:self-center ml-auto">
-    <img src="/producto-banner.png" alt="" />
+  <figure class="self-end
+  md:self-center
+  ml-auto">
+    <img src="/producto-banner.png" alt="" class="w-80 md:w-98" />
   </figure>
 </section>
-
-<style>
-</style>

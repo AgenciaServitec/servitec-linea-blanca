@@ -1,0 +1,19 @@
+---
+import { CardService } from "../components";
+import { services } from "../data-list/services.js";
+---
+
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+  {
+    services.map((service) => {
+      return (
+        <CardService
+          image={service.props.image}
+          title={service.props.title}
+          description={service.props.description}
+          link={service.params.service}
+        />
+      );
+    })
+  }
+</section>
