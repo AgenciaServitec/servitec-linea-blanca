@@ -1,2 +1,6 @@
 pnpm-lock.yaml
 /lib
+/node_modules
+README.md
+package-lock.json
+/dist
