@@ -6,21 +6,35 @@ const logos = [
   "bosch",
   "electrolux",
   "lg",
-  "rotoplas"
+  "rotoplas",
 ];
 ---
 
-<section class="flex flex-wrap gap-4 overflow-x-auto bg-primary-color-500 justify-evenly items-center p-6 md:p-0 md:py-6">
+<!-- <section
+  class="flex flex-wrap gap-4 overflow-x-auto bg-primary-color-500 justify-evenly items-center p-6 md:p-0 md:py-6"
+>
   {
     logos.map((logo) => {
       return (
         <figure class="w-24 flex flex-col justify-center">
-          <img
-            src={`/logo-${logo}.webp`}
-            alt={`Logo de la marca ${logo}`}
-          />
+          <img src={`/logo-${logo}.webp`} alt={`Logo de la marca ${logo}`} />
         </figure>
       );
     })
   }
-</section>
+</section> -->
+<div class="carrusel">
+  <div
+    class="carousel carousel-center p-4 space-x-4 bg-neutral rounded-box"
+  >
+    {
+      logos.map((logo) => {
+        return (
+          <figure class="w-24 flex justify-center carousel-item">
+            <img src={`/logo-${logo}.webp`} alt={`Logo de la marca ${logo}`} />
+          </figure>
+        );
+      })
+    }
+  </div>
+</div>

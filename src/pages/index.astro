@@ -2,10 +2,11 @@
 import { About, Banner, BannerBrands, CardService, Title } from "../components";
 import { BaseLayout } from "../layouts";
 import { services } from "../data-list/services.js";
+import Testimonials from "../components/home/Testimonials.astro";
 ---
 
 <BaseLayout title="Servitec linea blanca">
-  <main class="mb-20">
+  <main class="">
     <Banner />
     <BannerBrands />
     <section class="px-6 py-20">
@@ -29,5 +30,6 @@ import { services } from "../data-list/services.js";
       </section>
     </section>
     <About />
+    <Testimonials/>
   </main>
 </BaseLayout>
