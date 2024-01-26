@@ -12,20 +12,20 @@ const { image, title, description, link } = Astro.props;
 ---
 
 <article
-  class="flex flex-col max-w-sm rounded-lg shadow-xl"
+  class="flex flex-col max-w-sm rounded-lg shadow-xl overflow-hidden bg-white"
 >
-  <a href={`/services${link}`}>
-    <img class="mx-auto object-cover" src={image} alt="" />
+  <a href={`/services${link}`} class="h-48">
+    <img class="mx-auto h-full object-contain" src={image} alt="" />
   </a>
-  <div class="flex flex-col p-5 flex-1">
+  <div class="flex flex-col p-4 flex-grow">
     <a href={`/services${link}`}>
-      <h5
-        class="mb-2 text-2xl font-bold tracking-tight text-primary-color-800"
+      <h3
+        class="mb-2 text-xl font-bold tracking-tight text-text-[#010002]"
       >
         {title}
-      </h5>
+      </h3>
     </a>
-    <p class="mb-3 font-normal text-primary-color-900">
+    <p class="mb-3 font-normal text-primary-color-900 text-pretty">
       {description}
     </p>
     <Button link={`/services${link}`} increaseStyle="mt-auto" >

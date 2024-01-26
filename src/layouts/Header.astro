@@ -1,6 +1,6 @@
 ---
 import { Banner } from "../components";
-import { Icon } from "astro-icon";
+// import { Icon } from "astro-icon";
 import NavBar from "../components/home/NavBar.astro";
 import NavBarMovil from "../components/home/NavBarMovil.astro";
 ---
@@ -9,7 +9,8 @@ import NavBarMovil from "../components/home/NavBarMovil.astro";
   <figure class="w-44">
     <img src="/logo-air-servitec.png" alt="" />
   </figure>
-  <Icon name="mdi:menu" id="btnNavbar" class="w-10 md:hidden" />
+  <!-- <Icon name="mdi:menu" id="btnNavbar" class="w-10 md:hidden" /> -->
+  <p id="btnNavbar" class="w-10 md:hidden">💖</p>
   <NavBar />
   <NavBarMovil />
 </header>
@@ -17,7 +18,6 @@ import NavBarMovil from "../components/home/NavBarMovil.astro";
 <script>
   const btnNavbar = document.querySelector("#btnNavbar");
   const navBarMovil = document.querySelector("#NavBarMovil") ;
-  console.log({navBarMovil});
 
   btnNavbar.addEventListener("click", () => {
     if(navBarMovil.classList.contains("desactivado")){

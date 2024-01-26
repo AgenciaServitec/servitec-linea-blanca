@@ -7,6 +7,18 @@ const logos = [
   "electrolux",
   "lg",
   "rotoplas",
+  "amana-corporation",
+  "amcrest",
+  "arlo",
+  "black&decker",
+  "bosch",
+  "braun",
+  "breville",
+  "carrier",
+  "cuisinart",
+  "dahua",
+  "daikin",
+  "electrolux"
 ];
 ---
 
@@ -22,8 +34,7 @@ const logos = [
       );
     })
   }
-</section> -->
-<div class="carrusel">
+</section> --><!-- <div class="carrusel">
   <div
     class="carousel carousel-center p-4 space-x-4 bg-neutral rounded-box"
   >
@@ -37,4 +48,99 @@ const logos = [
       })
     }
   </div>
+</div> --><!-- <div class="w-full overflow-hidden slider bg-red-500">
+  <div class="slide-track">
+    {
+      logos.map((logo) => {
+        return (
+          <figure class="w-24 flex justify-center slide bg-green-500 p-2">
+            <img src={`/logo-${logo}.webp`} alt={`Logo de la marca ${logo}`} class="object-contain" />
+          </figure>
+        );
+      })
+    }
+  </div>
 </div>
+
+<style>
+  .slider .slide-track{
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(96px * 14);
+  }
+
+  @keyframes scroll{
+    0%{
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100%{
+      -webkit-transform: translateX(calc(-100%));
+      transform: translateX(calc(-100%));
+    }
+  }
+
+</style> -->
+
+<div class="logos p-5">
+  <div class="logos-slide flex gap-4">
+    {
+      logos.map((logo) => {
+        return (
+          <img
+            src={`/images/${logo}.webp`}
+            alt={`Logo de la marca ${logo}`}
+            class="h-6"
+          />
+        );
+      })
+    }
+  </div>
+</div>
+
+<style>
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .logos {
+    overflow: hidden;
+    background: white;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  /* .logos:before,
+  .logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+
+  .logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  }
+
+  .logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  } */
+
+  .logos:hover .logos-slide {
+    animation-play-state: paused;
+  }
+
+  .logos-slide {
+    animation: 35s slide infinite linear;
+  }
+</style>

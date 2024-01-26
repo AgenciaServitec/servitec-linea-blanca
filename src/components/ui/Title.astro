@@ -3,19 +3,20 @@ interface Props {
   title?: string;
   size?: string;
   marginBottom?: string;
+  color?: string
 }
 
-const { title, size = "text-4xl", marginBottom = "mb-4" } = Astro.props;
+const { title, size = "text-4xl", marginBottom = "mb-6", color = "text-white" } = Astro.props;
 ---
 
 <h2
   class={`${marginBottom} 
-  text-4xl 
-  md:text-5xl 
-  tracking-tight 
-  font-extrabold 
-  text-center 
-  text-tertiary-color-950`}
+  text-4xl
+  md:text-5xl
+  tracking-tight
+  font-extrabold
+  text-center
+  ${color}`}
 >
   {title}
   <span>
