@@ -1,36 +1,99 @@
 ---
-import { Title } from "../";
+import { Title } from "..";
 ---
 
-<section class="flex flex-col px-6 my-20 lg:flex-row">
-    <figure class="flex-1 flex justify-center lg:m-0">
-        <img src="/images/tecnico.png" alt="" class="w-full md:w-96 object-cover">
-    </figure>
-    <div class="flex-1 pt-5">
-      <Title color="text-[#0aabd7]">Reserva tu Cita</Title>
-      <form class="">
-          <div class="mb-5">
-            <label for="name" class="block mb-2 text-sm font-medium text-[#010002]">Nombre</label>
-            <input type="text" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
-          </div>
-          <div class="mb-5">
-            <label for="cellphone" class="block mb-2 text-sm font-medium text-[#010002]">Número De Teléfono</label>
-            <input type="text" id="cellphone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
-          </div>
-          <div class="mb-5">
-            <label for="address" class="block mb-2 text-sm font-medium text-[#010002]">Dirección</label>
-            <input type="text" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
-          </div>
-          <div class="mb-5">
-              <label for="countries" class="block mb-2 text-sm font-medium text-[#010002]">Select your country</label>
-        <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+<section class="flex flex-col px-6 py-32 lg:py-40 lg:flex-row cita">
+  <figure class="flex-1 flex justify-center lg:m-0">
+    <img src="/images/tecnico.png" alt="" class="w-full md:w-96 object-cover" />
+  </figure>
+  <div class="flex-1 pt-5">
+    <Title color="text-[#0aabd7]">Reserva tu Cita</Title>
+    <form class="">
+      <div class="mb-5">
+        <label for="name" class="block mb-2 text-sm font-medium text-[#010002]"
+          >Nombre</label
+        >
+        <input
+          type="text"
+          id="name"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          required
+        />
+      </div>
+      <div class="mb-5">
+        <label
+          for="cellphone"
+          class="block mb-2 text-sm font-medium text-[#010002]"
+          >Número De Teléfono</label
+        >
+        <input
+          type="text"
+          id="cellphone"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          required
+        />
+      </div>
+      <div class="mb-5">
+        <label
+          for="address"
+          class="block mb-2 text-sm font-medium text-[#010002]">Dirección</label
+        >
+        <input
+          type="text"
+          id="address"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          required
+        />
+      </div>
+      <div class="mb-5">
+        <label
+          for="countries"
+          class="block mb-2 text-sm font-medium text-[#010002]"
+          >Select your country</label
+        >
+        <select
+          id="countries"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        >
           <option>United States</option>
           <option>Canada</option>
           <option>France</option>
           <option>Germany</option>
         </select>
-          </div>
-          <button type="submit" class="text-white bg-[#0aabd7] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Socilite ahora</button>
-      </form>
-    </div>
+      </div>
+      <button
+        type="submit"
+        class="text-white bg-[#0aabd7] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >Solicite ahora</button
+      >
+    </form>
+  </div>
+  <img
+    src="../../../public/images/waves-bottom.svg"
+    alt=""
+    class="image-cita"
+  />
+  <img
+    src="../../../public/images/waves-top.svg"
+    alt=""
+    class="image-cita-top"
+  />
 </section>
+
+<style>
+  .cita {
+    position: relative;
+  }
+
+  .image-cita {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .image-cita-top {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+</style>

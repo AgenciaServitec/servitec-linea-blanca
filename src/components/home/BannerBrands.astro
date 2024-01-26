@@ -11,14 +11,46 @@ const logos = [
   "amcrest",
   "arlo",
   "black&decker",
-  "bosch",
   "braun",
   "breville",
   "carrier",
   "cuisinart",
   "dahua",
   "daikin",
-  "electrolux"
+  "frigidaire",
+  "fujitsu",
+  "ge-appliances",
+  "general-electric",
+  "haier",
+  "hamilton-beach",
+  "hikvision",
+  "hisense",
+  "hitachi",
+  "kitchenaid",
+  "lorex",
+  "maytag",
+  "miele",
+  "mitsubishi-electric",
+  "nest",
+  "ninja",
+  "oster",
+  "panasonic",
+  "philips",
+  "reolink",
+  "ring",
+  "samsung",
+  "sharp",
+  "siemens",
+  "sony",
+  "speed-queen",
+  "swann",
+  "tcl",
+  "toshiba",
+  "trane",
+  "viking",
+  "vitamix",
+  "vizio",
+  "whirlpool",
 ];
 ---
 
@@ -82,16 +114,15 @@ const logos = [
   }
 
 </style> -->
-
-<div class="logos p-5">
-  <div class="logos-slide flex gap-4">
+<div class="logos">
+  <div class="logos-slide flex py-6 gap-6">
     {
       logos.map((logo) => {
         return (
           <img
-            src={`/images/${logo}.webp`}
+            src={`/images/marcas/${logo}.webp`}
             alt={`Logo de la marca ${logo}`}
-            class="h-6"
+            class="h-5 object-contain"
           />
         );
       })
