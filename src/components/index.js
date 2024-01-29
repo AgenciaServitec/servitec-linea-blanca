@@ -8,3 +8,4 @@ export * from "../layouts";
 export * from "./home";
 
 export { default as OtherServices } from "./OtherServices.astro";
+export { default as AdvantagesCarousel } from "./AdvantagesCarousel.astro";

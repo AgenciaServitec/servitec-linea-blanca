@@ -1,5 +1,5 @@
 ---
-import { About, Banner, BannerBrands, Button, CardService, Title } from "../components";
+import { Banner, BannerBrands, CardService, Title } from "../components";
 import { BaseLayout } from "../layouts";
 import { services } from "../data-list/services.js";
 import Testimonials from "../components/home/Testimonials.astro";
@@ -11,7 +11,7 @@ import BookYourAppointment from "../components/home/BookYourAppointment.astro";
     <Banner />
     <BannerBrands />
     <section class="flex flex-col items-center px-6 py-20 bg-[#0aabd7]">
-      <Title title="Servicios Principales" marginBottom="mb-10" />
+      <Title color="text-white">Servicios Principales</Title>
       <section class="grid
       grid-cols-1
       md:grid-cols-3
@@ -29,10 +29,14 @@ import BookYourAppointment from "../components/home/BookYourAppointment.astro";
           })
         }
       </section>
-      <Button link="/services/" increaseStyle="mt-10" bgColor="bg-[#3b4289]">Mostrar más</Button>
+      <a
+        href="/services/"
+        class="flex justify-center items-center w-full md:w-96 uppercase mt-12 text-white bg-[#3b4289] hover:bg-[#5063c0] focus:ring-4 font-medium rounded-lg text-lg px-5 py-4 focus:outline-none"
+      >
+        Mostrar más
+      </a>
     </section>
-    <!-- <About /> -->
-    <BookYourAppointment/>
-    <Testimonials/>
+    <BookYourAppointment />
+    <Testimonials />
   </main>
 </BaseLayout>

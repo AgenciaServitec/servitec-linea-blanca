@@ -1,2 +1,29 @@
 ---
+import { CardService, Title, AdvantagesCarousel } from "../../components";
+import { services } from "../../data-list/services";
+import { BaseLayout } from "../../layouts";
 ---
+
+<BaseLayout title="Servicios">
+  <section class="py-10 px-6 lg:px-8">
+    <Title>Nuestros Servicios</Title>
+    <section class="grid
+      grid-cols-1
+      md:grid-cols-3
+      gap-6">
+      {
+        services.map((service) => {
+          return (
+            <CardService
+              image={service.props.image}
+              title={service.props.title}
+              description={service.props.description}
+              link={service.params.service}
+            />
+          );
+        })
+      }
+    </section>
+  </section>
+  <AdvantagesCarousel />
+</BaseLayout>
