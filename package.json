@@ -20,7 +20,6 @@
     "tailwindcss": "^3.3.6"
   },
   "devDependencies": {
-    "@iconify-json/mdi": "^1.1.64",
     "prettier": "^3.0.3",
     "sass": "^1.69.4"
   }

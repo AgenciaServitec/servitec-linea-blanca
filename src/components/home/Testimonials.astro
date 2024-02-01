@@ -679,7 +679,7 @@ import { Title } from "../../components";
   </div>
 </section>
 
-<script type="module">
+<!-- <script type="module">
   import KeenSlider from "https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm";
 
   const keenSlider = new KeenSlider(
@@ -719,4 +719,36 @@ import { Title } from "../../components";
 
   keenSliderPreviousDesktop.addEventListener("click", () => keenSlider.prev());
   keenSliderNextDesktop.addEventListener("click", () => keenSlider.next());
+</script> -->
+
+<script type="module">
+  import KeenSlider from "https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm";
+
+  const keenSlider = new KeenSlider(
+    "#keen-slider",
+    {
+      loop: true,
+      slides: {
+        origin: "center",
+        perView: 1.25,
+        spacing: 16,
+      },
+      breakpoints: {
+        "(min-width: 1024px)": {
+          slides: {
+            origin: "auto",
+            perView: 1.5,
+            spacing: 32,
+          },
+        },
+      },
+      // Configuración del carrusel automático
+      autoplay: {
+        delay: 5000, // Intervalo en milisegundos
+      },
+    },
+    []
+  );
+
+  // No necesitas cambiar el código para los controles de navegación
 </script>

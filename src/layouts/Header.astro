@@ -5,24 +5,26 @@ import NavBar from "../components/home/NavBar.astro";
 import NavBarMovil from "../components/home/NavBarMovil.astro";
 ---
 
-<header class="relative h-20 flex justify-between items-center px-6 shadow-xl">
-  <figure class="w-44">
-    <img src="/logo-air-servitec.png" alt="" />
-  </figure>
-  <!-- <Icon name="mdi:menu" id="btnNavbar" class="w-10 md:hidden" /> -->
-  <p id="btnNavbar" class="w-10 md:hidden">💖</p>
+<header class="relative flex justify-between items-center h-20 px-6 shadow-xl">
+  <a href="/" class="flex items-center">
+    <img
+      src="/logo-air-servitec.png"
+      class="h-10"
+      alt="Logo de Servitec Reparación Linea Blanca"
+    />
+  </a>
   <NavBar />
   <NavBarMovil />
 </header>
 
 <script>
   const btnNavbar = document.querySelector("#btnNavbar");
-  const navBarMovil = document.querySelector("#NavBarMovil") ;
+  const navBarMovil = document.querySelector("#NavBarMovil");
 
   btnNavbar.addEventListener("click", () => {
-    if(navBarMovil.classList.contains("desactivado")){
+    if (navBarMovil.classList.contains("desactivado")) {
       navBarMovil.classList.remove("desactivado");
       navBarMovil.classList.add("activado");
     }
-  })
+  });
 </script>
