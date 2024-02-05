@@ -1,42 +1,42 @@
 ---
-import { Banner, BannerBrands, CardService, Title } from "../components";
-import { BaseLayout } from "../layouts";
-import { services } from "../data-list/services.js";
-import Testimonials from "../components/home/Testimonials.astro";
-import BookYourAppointment from "../components/home/BookYourAppointment.astro";
+import { Banner, BannerBrands, CardService, Title } from '../components';
+import { BaseLayout } from '../layouts';
+import { services } from '../data-list/services.js';
+import Testimonials from '../components/home/Testimonials.astro';
+import BookYourAppointment from '../components/home/BookYourAppointment.astro';
 ---
 
 <BaseLayout title="Servitec linea blanca">
-  <main class="">
-    <Banner />
-    <BannerBrands />
-    <section class="flex flex-col items-center px-6 py-20 bg-[#0aabd7]">
-      <Title color="text-white">Servicios Principales</Title>
-      <section class="grid
+	<main class="">
+		<Banner />
+		<BannerBrands />
+		<section class="flex flex-col items-center bg-[#0aabd7] px-6 py-20">
+			<Title color="text-white">Servicios Principales</Title>
+			<section class="grid
       grid-cols-1
-      md:grid-cols-3
-      gap-6">
-        {
-          services.slice(0, 3).map((service) => {
-            return (
-              <CardService
-                image={service.props.image}
-                title={service.props.title}
-                description={service.props.description}
-                link={service.params.service}
-              />
-            );
-          })
-        }
-      </section>
-      <a
-        href="/services/"
-        class="flex justify-center items-center w-full md:w-96 uppercase mt-12 text-white bg-[#3b4289] hover:bg-[#5063c0] focus:ring-4 font-medium rounded-lg text-lg px-5 py-4 focus:outline-none"
-      >
-        Mostrar más
-      </a>
-    </section>
-    <BookYourAppointment />
-    <Testimonials />
-  </main>
+      gap-6
+      md:grid-cols-3">
+				{
+					services.slice(0, 3).map((service) => {
+						return (
+							<CardService
+								image={service.props.image}
+								title={service.props.title}
+								description={service.props.description}
+								link={service.params.service}
+							/>
+						);
+					})
+				}
+			</section>
+			<a
+				href="/services/"
+				class="mt-12 flex w-full items-center justify-center rounded-lg bg-[#3b4289] px-5 py-4 text-lg font-medium uppercase text-white hover:bg-[#5063c0] focus:outline-none focus:ring-4 md:w-96"
+			>
+				Mostrar más
+			</a>
+		</section>
+		<BookYourAppointment />
+		<Testimonials />
+	</main>
 </BaseLayout>
