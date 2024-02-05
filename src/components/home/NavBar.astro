@@ -1,193 +1,189 @@
----
-
----
-
 <nav>
-  <div
-    class="flex items-center md:hidden md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse"
-  >
-    <button
-      type="button"
-      id="btnNavbar"
-      class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text[#010002] rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-      aria-controls="mega-menu"
-      aria-expanded="false"
-    >
-      <span class="sr-only">Open main menu</span>
-      <svg
-        class="w-5 h-5"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 17 14"
-      >
-        <path
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M1 1h15M1 7h15M1 13h15"></path>
-      </svg>
-    </button>
-  </div>
-  <div
-    id="mega-menu"
-    class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 z-50"
-  >
-    <ul class="flex items-center gap-8 font-medium">
-      <li>
-        <a href="/" class="text-[#010002]" aria-current="page">Home</a>
-      </li>
-      <li>
-        <div
-          class="flex justify-between items-center w-full font-medium text-[#010002]"
-        >
-          <a href="/services" class="text-[#010002] mr-2"> Services</a>
-          <button
-            id="mega-menu-dropdown-button"
-            data-dropdown-toggle="mega-menu-dropdown"
-            class="p-2 border-2 border-[#010002] rounded"
-          >
-            <svg
-              class="w-2.5 h-2.5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 10 6"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m1 1 4 4 4-4"></path>
-            </svg>
-          </button>
-        </div>
-        <div
-          id="mega-menu-dropdown"
-          class="hidden absolute z-50 grid w-auto grid-cols-2 text-sm bg-white border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-3 dark:bg-gray-700"
-        >
-          <div class="p-4 pb-0md:pb-4">
-            <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
-              <li>
-                <a
-                  href="/services/reparacion-de-licuadoras"
-                  class="text-[#010002]"
-                >
-                  Reparación de Licuadoras
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/services/reparacion-de-refrigeradoras"
-                  class="text-[#010002]"
-                >
-                  Reparación de Refrigeradoras
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/services/reparacion-de-lavadoras"
-                  class="text-[#010002]"
-                >
-                  Reparación de Lavadoras
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/services/reparacion-de-visicooler"
-                  class="text-[#010002]"
-                >
-                  Reparación de Visicooler
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="p-4 pb-0 text-[#010002] md:pb-4 dark:text-white">
-            <ul class="space-y-4">
-              <li>
-                <a
-                  href="/services/reparacion-de-televisores"
-                  class="text-[#010002]"
-                >
-                  Reparación de Televisores
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/services/reparacion-de-cocinas"
-                  class="text-[#010002]"
-                >
-                  Reparación de Cocinas
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/services/reparacion-de-aire-acondicionado"
-                  class="text-[#010002]"
-                >
-                  Reparación de Aire Acondicionado
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/services/reparacion-de-secadoras"
-                  class="text-[#010002]"
-                >
-                  Reparación de Secadoras
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="p-4">
-            <ul class="space-y-4">
-              <li>
-                <a
-                  href="/services/reparacion-de-terma-electrica"
-                  class="text-[#010002]"
-                >
-                  Reparación de Terma Eléctrica
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/services/reparacion-de-campana-extractora"
-                  class="text-[#010002]"
-                >
-                  Reparación de Campana Extractora
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/services/reparacion-de-camaras-de-seguridad"
-                  class="text-[#010002]"
-                >
-                  Reparación de Cámaras de Seguridad
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-      <li>
-        <a href="/about-us" class="text-[#010002]">Nosotros</a>
-      </li>
-      <li>
-        <a href="/contact" class="text-[#010002]">Contacto</a>
-      </li>
-    </ul>
-  </div>
+	<div
+		class="flex items-center space-x-1 rtl:space-x-reverse md:order-2 md:hidden md:space-x-2"
+	>
+		<button
+			type="button"
+			id="btnNavbar"
+			class="text[#010002] inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden"
+			aria-controls="mega-menu"
+			aria-expanded="false"
+		>
+			<span class="sr-only">Open main menu</span>
+			<svg
+				class="h-5 w-5"
+				aria-hidden="true"
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 17 14"
+			>
+				<path
+					stroke="currentColor"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					d="M1 1h15M1 7h15M1 13h15"></path>
+			</svg>
+		</button>
+	</div>
+	<div
+		id="mega-menu"
+		class="z-50 hidden w-full items-center justify-between md:order-1 md:flex md:w-auto"
+	>
+		<ul class="flex items-center gap-8 font-medium">
+			<li>
+				<a href="/" class="text-[#010002]" aria-current="page">Home</a>
+			</li>
+			<li>
+				<div
+					class="flex w-full items-center justify-between font-medium text-[#010002]"
+				>
+					<a href="/services" class="mr-2 text-[#010002]"> Services</a>
+					<button
+						id="mega-menu-dropdown-button"
+						data-dropdown-toggle="mega-menu-dropdown"
+						class="rounded border-2 border-[#010002] p-2"
+					>
+						<svg
+							class="h-2.5 w-2.5"
+							aria-hidden="true"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 10 6"
+						>
+							<path
+								stroke="currentColor"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="m1 1 4 4 4-4"></path>
+						</svg>
+					</button>
+				</div>
+				<div
+					id="mega-menu-dropdown"
+					class="absolute z-50 grid hidden w-auto grid-cols-2 rounded-lg border border-gray-100 bg-white text-sm shadow-md dark:border-gray-700 dark:bg-gray-700 md:grid-cols-3"
+				>
+					<div class="pb-0md:pb-4 p-4">
+						<ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
+							<li>
+								<a
+									href="/services/reparacion-de-licuadoras"
+									class="text-[#010002]"
+								>
+									Reparación de Licuadoras
+								</a>
+							</li>
+							<li>
+								<a
+									href="/services/reparacion-de-refrigeradoras"
+									class="text-[#010002]"
+								>
+									Reparación de Refrigeradoras
+								</a>
+							</li>
+							<li>
+								<a
+									href="/services/reparacion-de-lavadoras"
+									class="text-[#010002]"
+								>
+									Reparación de Lavadoras
+								</a>
+							</li>
+							<li>
+								<a
+									href="/services/reparacion-de-visicooler"
+									class="text-[#010002]"
+								>
+									Reparación de Visicooler
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="p-4 pb-0 text-[#010002] dark:text-white md:pb-4">
+						<ul class="space-y-4">
+							<li>
+								<a
+									href="/services/reparacion-de-televisores"
+									class="text-[#010002]"
+								>
+									Reparación de Televisores
+								</a>
+							</li>
+							<li>
+								<a
+									href="/services/reparacion-de-cocinas"
+									class="text-[#010002]"
+								>
+									Reparación de Cocinas
+								</a>
+							</li>
+							<li>
+								<a
+									href="/services/reparacion-de-aire-acondicionado"
+									class="text-[#010002]"
+								>
+									Reparación de Aire Acondicionado
+								</a>
+							</li>
+							<li>
+								<a
+									href="/services/reparacion-de-secadoras"
+									class="text-[#010002]"
+								>
+									Reparación de Secadoras
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="p-4">
+						<ul class="space-y-4">
+							<li>
+								<a
+									href="/services/reparacion-de-terma-electrica"
+									class="text-[#010002]"
+								>
+									Reparación de Terma Eléctrica
+								</a>
+							</li>
+							<li>
+								<a
+									href="/services/reparacion-de-campana-extractora"
+									class="text-[#010002]"
+								>
+									Reparación de Campana Extractora
+								</a>
+							</li>
+							<li>
+								<a
+									href="/services/reparacion-de-camaras-de-seguridad"
+									class="text-[#010002]"
+								>
+									Reparación de Cámaras de Seguridad
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li>
+				<a href="/about-us" class="text-[#010002]">Nosotros</a>
+			</li>
+			<li>
+				<a href="/contact" class="text-[#010002]">Contacto</a>
+			</li>
+		</ul>
+	</div>
 </nav>
 
 <script>
-  const btnNavbar = document.querySelector("#btnNavbar");
-  const navBarMovil = document.querySelector("#NavBarMovil");
+	const btnNavbar = document.querySelector('#btnNavbar');
+	const navBarMovil = document.querySelector('#NavBarMovil');
 
-  btnNavbar.addEventListener("click", () => {
-    if (navBarMovil.classList.contains("desactivado")) {
-      navBarMovil.classList.remove("desactivado");
-      navBarMovil.classList.add("activado");
-    }
-  });
+	btnNavbar.addEventListener('click', () => {
+		if (navBarMovil.classList.contains('desactivado')) {
+			navBarMovil.classList.remove('desactivado');
+			navBarMovil.classList.add('activado');
+		}
+	});
 </script>

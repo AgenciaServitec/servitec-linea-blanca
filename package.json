@@ -7,13 +7,13 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format:prettier": "prettier --write ."
   },
   "dependencies": {
     "@astrojs/react": "^3.0.7",
     "@astrojs/tailwind": "^5.0.3",
     "astro": "^4.0.5",
-    "astro-icon": "^1.0.2",
     "flowbite": "^2.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -21,6 +21,8 @@
   },
   "devDependencies": {
     "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.3",
+    "prettier-plugin-tailwindcss": "^0.5.11",
     "sass": "^1.69.4"
   }
 }
