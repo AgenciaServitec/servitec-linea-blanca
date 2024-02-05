@@ -2,7 +2,7 @@
 	"useTabs": true,
 	"singleQuote": true,
 	"trailingComma": "none",
-	"semi": false,
+	"semi": true,
 	"printWidth": 80,
 	"plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
 	"pluginSearchDirs": false
