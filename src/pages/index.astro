@@ -1,21 +1,23 @@
 ---
-import { About, Banner, BannerBrands, CardService, Title } from "../components";
+import { Banner, BannerBrands, CardService, Title } from "../components";
 import { BaseLayout } from "../layouts";
 import { services } from "../data-list/services.js";
+import Testimonials from "../components/home/Testimonials.astro";
+import BookYourAppointment from "../components/home/BookYourAppointment.astro";
 ---
 
 <BaseLayout title="Servitec linea blanca">
-  <main class="mb-20">
+  <main class="">
     <Banner />
     <BannerBrands />
-    <section class="px-6 py-20">
-      <Title title="Nuestros Servicios" marginBottom="mb-10" />
+    <section class="flex flex-col items-center px-6 py-20 bg-[#0aabd7]">
+      <Title color="text-white">Servicios Principales</Title>
       <section class="grid
       grid-cols-1
       md:grid-cols-3
       gap-6">
         {
-          services.map((service) => {
+          services.slice(0, 3).map((service) => {
             return (
               <CardService
                 image={service.props.image}
@@ -27,7 +29,14 @@ import { services } from "../data-list/services.js";
           })
         }
       </section>
+      <a
+        href="/services/"
+        class="flex justify-center items-center w-full md:w-96 uppercase mt-12 text-white bg-[#3b4289] hover:bg-[#5063c0] focus:ring-4 font-medium rounded-lg text-lg px-5 py-4 focus:outline-none"
+      >
+        Mostrar más
+      </a>
     </section>
-    <About />
+    <BookYourAppointment />
+    <Testimonials />
   </main>
 </BaseLayout>
