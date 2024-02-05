@@ -4,6 +4,7 @@ export const services = [
     props: {
       id: "",
       image: "/images/services-home/blender.jpg",
+      icon: "game-icons:blender",
       title: "Reparación de Licuadoras",
       description:
         "Recupera la potencia de tu licuadora con nuestro servicio de reparación. ¡Bebidas frescas y saludables te esperan!",
@@ -16,6 +17,7 @@ export const services = [
     props: {
       id: "",
       image: "/images/services-home/refrigerator.jpg",
+      icon: "game-icons:fridge",
       title: "Reparación de Refrigeradores",
       description:
         "Mantén tus alimentos frescos y seguros con nuestro servicio de reparación de refrigeradoras. ¡Eficiencia y tranquilidad para tu hogar!",
@@ -28,6 +30,7 @@ export const services = [
     props: {
       id: "",
       image: "/images/services-home/washing-machine.jpg",
+      icon: "game-icons:washing-machine",
       title: "Reparación de Lavadoras",
       description:
         "Recupera la funcionalidad de tu lavadora con nuestro servicio especializado. ¡Ropa impecable en cada ciclo!",
@@ -40,6 +43,7 @@ export const services = [
     props: {
       id: "",
       image: "/images/services-home/visicooler.jpg",
+      icon: "",
       title: "Reparación de Visicooler",
       description:
         "Optimiza el rendimiento de tu visicooler con nuestro servicio técnico. ¡Productos siempre listos para su venta!",
@@ -52,6 +56,7 @@ export const services = [
     props: {
       id: "",
       image: "/images/services-home/tv.jpg",
+      icon: "game-icons:tv",
       title: "Reparación de Televisores",
       description:
         "Disfruta de una experiencia visual sin interrupciones con nuestro servicio de reparación de televisores. ¡Calidad de imagen excepcional!",
@@ -64,6 +69,7 @@ export const services = [
     props: {
       id: "",
       image: "/images/services-home/kitchen.jpg",
+      icon: "fe:kitchen-cooker",
       title: "Reparación de Cocinas",
       description:
         "Recupera la eficiencia en tu cocina con nuestro servicio especializado en reparación de cocinas. ¡Cocina sin preocupaciones!",
@@ -76,6 +82,7 @@ export const services = [
     props: {
       id: "",
       image: "/images/services-home/air-conditioning.jpg",
+      icon: "",
       title: "Reparación de Aire Acondicionado",
       description:
         "Mantén tu hogar fresco con nuestro servicio de reparación de aire acondicionado. ¡Clima perfecto en todo momento!",
@@ -88,6 +95,7 @@ export const services = [
     props: {
       id: "",
       image: "/images/services-home/dryer.jpg",
+      icon: "bx:bxs-dryer",
       title: "Reparación de Secadoras",
       description:
         "Optimiza el secado de tu ropa con nuestro servicio especializado. ¡Ropa seca y lista en poco tiempo!",
@@ -100,6 +108,7 @@ export const services = [
     props: {
       id: "",
       image: "/images/services-home/electric-heater.jpg",
+      icon: "",
       title: "Reparación de Termas Eléctricas",
       description:
         "Asegura un suministro constante de agua caliente con nuestro servicio de reparación de termas eléctricas. ¡Comodidad en cada baño!",
@@ -112,6 +121,7 @@ export const services = [
     props: {
       id: "",
       image: "/images/services-home/extractor-hood.jpg",
+      icon: "",
       title: "Reparación de Campana Extractora",
       description:
         "Mantén tu cocina libre de humos y olores desagradables con nuestro servicio de reparación de campana extractora. ¡Ambiente limpio y seguro!",
@@ -124,6 +134,7 @@ export const services = [
     props: {
       id: "",
       image: "/images/services-home/security-camera.jpg",
+      icon: "game-icons:cctv-camera",
       title: "Reparación de Cámaras de Seguridad",
       description:
         "Recupera la seguridad de tu espacio con nuestro servicio de reparación de cámaras de seguridad. ¡Vigilancia continua para tu tranquilidad!",

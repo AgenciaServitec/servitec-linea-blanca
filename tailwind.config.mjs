@@ -1,6 +1,12 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 export default {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: [
+    "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
+    "./node_modules/flowbite/**/*.js",
+  ],
   theme: {
     extend: {
       colors: {
@@ -43,16 +49,29 @@ export default {
           900: "#044176",
           950: "#032d57",
         },
+        "quaternary-color": {
+          50: "#f2f4fc",
+          100: "#e2e8f7",
+          200: "#ccd6f1",
+          300: "#a9bce7",
+          400: "#8099da",
+          500: "#6279cf",
+          600: "#4e5fc2",
+          700: "#444eb1",
+          800: "#3d4393",
+          900: "#343a74",
+          950: "#242647",
+        },
       },
       width: {
-        "98": "26rem",
-        "100": "30rem"
+        98: "26rem",
+        100: "30rem",
       },
       height: {
-        "98": "26rem",
-        "100": "30rem"
+        98: "26rem",
+        100: "30rem",
       }
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")]
 };

@@ -5,9 +5,7 @@ interface Props {
 
 const { isActive } = Astro.props;
 
-console.log(Astro);
-
-import { Icon } from "astro-icon";
+// import { Icon } from "astro-icon";
 ---
 
 <nav
@@ -15,8 +13,8 @@ import { Icon } from "astro-icon";
   class="nav absolute right-0 top-0 w-full h-screen flex justify-end bg-black/50 desactivado z-[500]"
 >
   <div class="w-5/6 p-6 flex flex-col bg-white">
-    <Icon name="mdi:close" id="close" class="w-10 self-end mb-2" />
-    <ul class="flex flex-col items-center uppercase text-center font-medium">
+    <!-- <Icon name="mdi:close" id="close" class="w-10 self-end mb-2" /> -->
+    <!-- <ul class="flex flex-col items-center uppercase text-center font-medium">
       <li class="text-center w-full">
         <a class="w-full block py-4" href="/">Inicio</a>
       </li>
@@ -74,9 +72,106 @@ import { Icon } from "astro-icon";
       <li class="text-center w-full">
         <a class="w-full block py-4" href="/contact">Contáctanos</a>
       </li>
+    </ul> -->
+    
+    <ul class="space-y-1">
+      <li>
+        <a href="/" class="block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700">
+          Inicio
+        </a>
+      </li>
+    
+      <li>
+        <details class="group [&_summary::-webkit-details-marker]:hidden">
+          <summary
+            class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+          >
+            <span class="text-sm font-medium"> Servicios </span>
+    
+            <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </span>
+          </summary>
+    
+          <ul class="mt-2 space-y-1 px-4">
+            <li>
+              <a
+                href=""
+                class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+              >
+              Reparación de Cocinas
+              </a>
+            </li>
+    
+            <li>
+              <a
+                href=""
+                class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+              >
+              Reparación de Refrigeradoras
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+              >
+              Reparación de Lavadoras
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+              >
+              Reparación de Cámaras de Seguridad
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+              >
+              Reparación de Televisores
+              </a>
+            </li>
+          </ul>
+        </details>
+      </li>
+    
+      <li>
+        <a
+          href="/about-us"
+          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+        >
+          Sobre Nosotros
+        </a>
+      </li>
+    
+      <li>
+        <a
+          href=""
+          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+        >
+          Contacto
+        </a>
+      </li>
     </ul>
   </div>
 </nav>
+
+
 
 <style>
   .active {

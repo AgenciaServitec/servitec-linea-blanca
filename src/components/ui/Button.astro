@@ -2,15 +2,18 @@
 interface Props {
   link?: string;
   increaseStyle?: string;
+  bgColor?: string;
+  typeButton?: string;
 }
 
-const { link, increaseStyle } = Astro.props;
+const { link, increaseStyle, bgColor = "bg-[#0aabd7]" } = Astro.props;
+
 ---
 
 <a
   href={link}
   type="button"
-  class={`flex items-center w-max uppercase text-white bg-primary-color-400 hover:bg-primary-color-300 focus:ring-4 focus:bg-primary-color-500 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none ${increaseStyle}`}
+  class={`flex items-center w-max uppercase text-white ${bgColor} hover:bg-primary-color-300 focus:ring-4 focus:bg-[#0aabd7] font-medium rounded-lg text-xs px-5 py-2.5 focus:outline-none ${increaseStyle}`}
 >
   <slot />
   <slot name="icon" />

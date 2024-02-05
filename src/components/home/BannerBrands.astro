@@ -6,21 +6,80 @@ const logos = [
   "bosch",
   "electrolux",
   "lg",
-  "rotoplas"
+  "rotoplas",
+  "amana-corporation",
+  "amcrest",
+  "arlo",
+  "black&decker",
+  "braun",
+  "breville",
+  "carrier",
+  "cuisinart",
+  "dahua",
+  "daikin",
+  "frigidaire",
+  "fujitsu",
+  "ge-appliances",
+  "general-electric",
+  "haier",
+  "hamilton-beach",
+  "hikvision",
+  "hisense",
+  "hitachi",
+  "kitchenaid",
+  "lorex",
+  "maytag",
+  "miele",
+  "mitsubishi-electric",
+  "nest",
+  "ninja",
+  "oster",
+  "panasonic",
+  "philips",
+  "reolink",
+  "ring",
+  "samsung",
+  "sharp",
+  "siemens",
+  "sony",
+  "speed-queen",
+  "swann",
+  "tcl",
+  "toshiba",
+  "trane",
+  "viking",
+  "vitamix",
+  "vizio",
+  "whirlpool",
 ];
 ---
 
-<section class="flex flex-wrap gap-4 overflow-x-auto bg-primary-color-500 justify-evenly items-center p-6 md:p-0 md:py-6">
-  {
-    logos.map((logo) => {
-      return (
-        <figure class="w-24 flex flex-col justify-center">
+<div class="group overflow-hidden bg-white whitespace-nowrap relative">
+  <div class="group-hover:animation-play-state-[paused] logos-slide flex py-6 gap-6">
+    {
+      logos.map((logo) => {
+        return (
           <img
-            src={`/logo-${logo}.webp`}
+            src={`/images/marcas/${logo}.webp`}
             alt={`Logo de la marca ${logo}`}
+            class="h-5 object-contain"
           />
-        </figure>
-      );
-    })
+        );
+      })
+    }
+  </div>
+</div>
+
+<style>
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
   }
-</section>
+  .logos-slide {
+    animation: 35s slide infinite linear;
+  }
+</style>

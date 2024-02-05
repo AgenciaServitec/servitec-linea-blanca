@@ -1,13 +1,43 @@
 ---
 import { BaseLayout } from "../../layouts";
-import { Title, About } from "../../components";
+import { AdvantagesCarousel, Title } from "../../components";
 ---
 
 <BaseLayout title="Nosotros">
-  <main class="py-10">
-    <Title>Nosotros</Title>
-    <About />
-  </main>
+  <section class="py-10 font-sans">
+    <Title >Sobre Nosotros</Title>
+    <section class="flex flex-col gap-6 px-6 lg:flex-row">
+      <figure class="flex-1 flex justify-center">
+        <img
+          src="https://media.istockphoto.com/id/1325196791/es/foto/el-joven-reparador-guapo-en-traje-de-trabajador-con-la-caja-de-herramientas-profesional-est%C3%A1.jpg?s=612x612&w=0&k=20&c=TVuVaEXvcPibbd38iVxkPXJrUJZFsLhsLMZhKxu54K8="
+          alt=""
+          class="w-full object-cover"
+        />
+      </figure>
+      <div class="flex-1">
+        <div class="mb-6">
+          <h3 class="text-2xl font-bold mb-4 text-[#010002]">Quiénes somos</h3>
+          <p class="text-pretty">
+            Servitec Reparación Línea Blanca es una empresa dedicada a la
+            reparación de electrodomésticos y servicios de línea blanca. Nuestro
+            compromiso radica en ofrecer soluciones de alta calidad para
+            satisfacer las necesidades de nuestros clientes.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-4 text-[#010002]">Qué hacemos</h3>
+          <p class="text-pretty">
+            En Servitec Reparación Línea Blanca, proporcionamos una amplia gama
+            de servicios para la reparación de electrodomésticos y línea blanca,
+            abordando cualquier nivel de complejidad. Nuestro equipo está
+            compuesto por técnicos altamente capacitados, con una experiencia
+            mínima de 5 años en el sector. Nos enorgullece superar con éxito los
+            desafíos técnicos más complejos, demostrando nuestro compromiso con
+            la excelencia en cada trabajo que realizamos.
+          </p>
+        </div>
+      </div>
+    </section>
+  </section>
+  <AdvantagesCarousel />
 </BaseLayout>
-
-<style type="scss"></style>
