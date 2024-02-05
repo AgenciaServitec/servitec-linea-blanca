@@ -5,6 +5,6 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://airservitec.com",
+  site: "https://servitec-reparacion-electrodomesticos.com",
   integrations: [icon(), react(), tailwind()]
 });
