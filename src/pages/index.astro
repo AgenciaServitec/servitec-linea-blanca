@@ -12,10 +12,7 @@ import BookYourAppointment from '../components/home/BookYourAppointment.astro';
 		<BannerBrands />
 		<section class="flex flex-col items-center bg-[#0aabd7] px-6 py-20">
 			<Title color="text-white">Servicios Principales</Title>
-			<section class="grid
-      grid-cols-1
-      gap-6
-      md:grid-cols-3">
+			<section class="grid grid-cols-1 gap-6 md:grid-cols-3">
 				{
 					services.slice(0, 3).map((service) => {
 						return (
