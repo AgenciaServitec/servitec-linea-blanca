@@ -1,30 +1,30 @@
 ---
-import { Banner } from "../components";
-// import { Icon } from "astro-icon";
-import NavBar from "../components/home/NavBar.astro";
-import NavBarMovil from "../components/home/NavBarMovil.astro";
+import NavBar from '../components/home/NavBar.astro';
+import NavBarMovil from '../components/home/NavBarMovil.astro';
 ---
 
-<header class="relative flex justify-between items-center h-20 px-6 shadow-xl">
-  <a href="/" class="flex items-center">
-    <img
-      src="/logo-air-servitec.png"
-      class="h-10"
-      alt="Logo de Servitec Reparación Linea Blanca"
-    />
-  </a>
-  <NavBar />
-  <NavBarMovil />
+<header class="relative flex h-20 items-center justify-between px-6 shadow-xl">
+	<a href="/" class="flex items-center">
+		<img
+			src="/logo-air-servitec.png"
+			class="h-10"
+			alt="Logo de Servitec Reparación Linea Blanca"
+			loading="lazy"
+		/>
+	</a>
+	<NavBar />
+	<NavBarMovil />
 </header>
 
 <script>
-  const btnNavbar = document.querySelector("#btnNavbar");
-  const navBarMovil = document.querySelector("#NavBarMovil");
+	const btnNavbar = document.querySelector('#btnNavbar');
+	const navBarMovil = document.querySelector('#NavBarMovil');
 
-  btnNavbar.addEventListener("click", () => {
-    if (navBarMovil.classList.contains("desactivado")) {
-      navBarMovil.classList.remove("desactivado");
-      navBarMovil.classList.add("activado");
-    }
-  });
+	btnNavbar.addEventListener('click', () => {
+		if (navBarMovil.classList.contains('desactivado')) {
+			navBarMovil.classList.remove('desactivado');
+			navBarMovil.classList.add('activado');
+			document.querySelector('body').style.overflow = 'hidden';
+		}
+	});
 </script>

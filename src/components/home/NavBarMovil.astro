@@ -4,76 +4,25 @@ interface Props {
 }
 
 const { isActive } = Astro.props;
-
-// import { Icon } from "astro-icon";
 ---
 
 <nav
 	id="NavBarMovil"
 	class="nav desactivado absolute right-0 top-0 z-[500] flex h-screen w-full justify-end bg-black/50"
 >
-	<div class="flex w-5/6 flex-col bg-white p-6">
-		<!-- <Icon name="mdi:close" id="close" class="w-10 self-end mb-2" /> -->
-		<!-- <ul class="flex flex-col items-center uppercase text-center font-medium">
-      <li class="text-center w-full">
-        <a class="w-full block py-4" href="/">Inicio</a>
-      </li>
-      <li class="relative overflow-hidden text-center w-full">
-        <div class="relative">
-          <span class="w-full block py-4 group btn-submenu">Servicios</span>
-          <Icon
-            id="arrow"
-            name="mdi-light:chevron-down"
-            class="w-8 absolute right-0 top-1/2 -translate-y-1/2"
-          />
-        </div>
-        <ul
-          class="h-0 sub-menu duration-500 ease-linear group-active:flex flex-col"
-        >
-          <li class="">
-            <a
-              class="flex justify-center text-xs p-2"
-              href="/services/reparacion-electrica-de-cocina"
-              >Reparación eléctrica de cocina</a
-            >
-          </li>
-          <li class="">
-            <a
-              class="flex justify-center text-xs p-2"
-              href="/services/reparacion-de-refrigeradoras"
-              >Reparación de refrigeradoras</a
-            >
-          </li>
-          <li class="">
-            <a
-              class="flex justify-center text-xs p-2"
-              href="/services/reparacion-de-lavadoras"
-              >Reparación de lavadoras</a
-            >
-          </li>
-          <li class="">
-            <a
-              class="flex justify-center text-xs p-2"
-              href="/services/reparacion-de-camaras">Reparación de cámaras</a
-            >
-          </li>
-          <li class="">
-            <a
-              class="flex justify-center text-xs p-2"
-              href="/services/reparacion-de-televisores"
-              >Reparación de televisores</a
-            >
-          </li>
-        </ul>
-      </li>
-      <li class="text-center w-full">
-        <a class="w-full block py-4" href="/about-us">Nosotros</a>
-      </li>
-      <li class="text-center w-full">
-        <a class="w-full block py-4" href="/contact">Contáctanos</a>
-      </li>
-    </ul> -->
-
+	<div class="flex w-4/5 flex-col bg-white p-6">
+		<button class="my-2 inline-block p-2" id="btn-close">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 384 512"
+				width="15"
+				class="fill-red-700"
+			>
+				<path
+					d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"
+				></path></svg
+			>
+		</button>
 		<ul class="space-y-1">
 			<li>
 				<a
@@ -193,18 +142,19 @@ const { isActive } = Astro.props;
 </style>
 
 <script>
-	const close = document.querySelector('#close');
+	const $btnClose = document.querySelector('#btn-close');
 	const nav = document.querySelector('.nav');
 	const btnSubmenu = document.querySelector('.btn-submenu');
 	const subMenu = document.querySelector('.sub-menu');
 	const arrow = document.querySelector('#arrow');
 
-	// close.addEventListener('click', () => {
-	// 	if (nav.classList.contains('activado')) {
-	// 		nav.classList.remove('activado');
-	// 		nav.classList.add('desactivado');
-	// 	}
-	// });
+	$btnClose.addEventListener('click', () => {
+		if (nav.classList.contains('activado')) {
+			nav.classList.remove('activado');
+			nav.classList.add('desactivado');
+			document.querySelector('body').style.overflow = 'initial';
+		}
+	});
 
 	// btnSubmenu.addEventListener('click', () => {
 	// 	subMenu.classList.toggle('active');
