@@ -1,42 +1,41 @@
 ---
-import { Button, Title } from "../../components";
+import { Button, Title } from '../../components';
 ---
 
-<!-- <section
-  class="flex
+<section
+	class="flex
+   w-full
    flex-col
    gap-2
-   md:flex-row
-   w-full
-   md:h-96
-   py-8
    bg-[url('/fondo-banner.jpg')]
-   bg-cover px-6"
+   bg-cover
+   px-6
+   py-8
+   md:h-96 md:flex-row"
 >
-  <section class="md:w-1/2
+	<section class="md:w-1/2
   md:self-center">
-    <h1
-      class="mb-6
+		<h1
+			class="mb-6
       text-4xl
-      lg:text-5xl
-      tracking-tight
       font-extrabold
-      text-white"
-    >
-      Servicio Técnico de Electrodomésticos
-    </h1>
-    <Button>Contáctanos</Button>
-  </section>
-  <figure class="self-end
-  md:self-center
-  ml-auto">
-    <img src="/producto-banner.png" alt="" class="w-80 md:w-98" />
-  </figure>
-</section> -->
-<div id="default-carousel" class="relative w-full" data-carousel="slide">
-  <!-- Carousel wrapper -->
+      tracking-tight
+      text-white
+      lg:text-5xl"
+		>
+			Servicio Técnico de Electrodomésticos
+		</h1>
+		<Button link="/contact">Contáctanos</Button>
+	</section>
+	<figure class="ml-auto
+  self-end
+  md:self-center">
+		<img src="/producto-banner.png" alt="" class="w-80 md:w-98" />
+	</figure>
+</section>
+
+<!-- <div id="default-carousel" class="relative w-full" data-carousel="slide">
   <div class="relative h-56 overflow-hidden md:h-96">
-    <!-- Item 1 -->
     <div class="hidden duration-700 ease-in-out" data-carousel-item="activo">
       <img
         src="https://wowslider.com/sliders/demo-18/data1/images/hongkong1081704.jpg"
@@ -44,7 +43,6 @@ import { Button, Title } from "../../components";
         alt="..."
       />
     </div>
-    <!-- Item 2 -->
     <div class="hidden duration-700 ease-in-out" data-carousel-item>
       <img
         src="https://www.jssor.com/demos/image-slider/img/faded-monaco-scenery-evening-dark-picjumbo-com-image.jpg"
@@ -52,7 +50,6 @@ import { Button, Title } from "../../components";
         alt="..."
       />
     </div>
-    <!-- Item 3 -->
     <div class="hidden duration-700 ease-in-out" data-carousel-item>
       <img
         src="https://soliloquywp.com/wp-content/uploads/2018/11/nb_ist_cover.jpg"
@@ -60,7 +57,6 @@ import { Button, Title } from "../../components";
         alt="..."
       />
     </div>
-    <!-- Item 4 -->
     <div class="hidden duration-700 ease-in-out" data-carousel-item>
       <img
         src="https://res.cloudinary.com/dmko6hpul/image/upload/v1568068457/one_kaxpwq.jpg"
@@ -68,7 +64,6 @@ import { Button, Title } from "../../components";
         alt="..."
       />
     </div>
-    <!-- Item 5 -->
     <div class="hidden duration-700 ease-in-out" data-carousel-item>
       <img
         src="https://images.unsplash.com/photo-1542744095-291d1f67b221?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2VifGVufDB8fDB8fHww"
@@ -77,7 +72,6 @@ import { Button, Title } from "../../components";
       />
     </div>
   </div>
-  <!-- Slider indicators -->
   <div
     class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse"
   >
@@ -112,7 +106,6 @@ import { Button, Title } from "../../components";
       aria-label="Slide 5"
       data-carousel-slide-to="4"></button>
   </div>
-  <!-- Slider controls -->
   <button
     type="button"
     class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
@@ -167,4 +160,4 @@ import { Button, Title } from "../../components";
 
 <script>
   import { Carousel } from "flowbite";
-</script>
+</script> -->
