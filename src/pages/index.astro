@@ -18,10 +18,10 @@ import FloatingCall from '../components/ui/FloatingCall.astro';
 					services.slice(0, 3).map((service) => {
 						return (
 							<CardService
-								image={service.props.image}
-								title={service.props.title}
-								description={service.props.description}
-								link={service.params.service}
+								image={service.image}
+								title={service.title}
+								description={service.description}
+								link={service.service}
 							/>
 						);
 					})
@@ -36,6 +36,6 @@ import FloatingCall from '../components/ui/FloatingCall.astro';
 		</section>
 		<BookYourAppointment />
 		<Testimonials />
-		<FloatingCall/>
+		<FloatingCall />
 	</main>
 </BaseLayout>

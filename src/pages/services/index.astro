@@ -15,10 +15,10 @@ import { BaseLayout } from "../../layouts";
         services.map((service) => {
           return (
             <CardService
-              image={service.props.image}
-              title={service.props.title}
-              description={service.props.description}
-              link={service.params.service}
+              image={service.image}
+              title={service.title}
+              description={service.description}
+              link={service.service}
             />
           );
         })
